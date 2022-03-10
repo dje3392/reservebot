@@ -10,12 +10,12 @@ from discord.ext.commands.errors import CommandInvokeError
 from PIL import Image, ExifTags
 
 # define static api stuff and image manipulation
-api_link = "https://impermanent.digital/api/idreamer/reserve"
+api_link = os.getenv('API')
 headers = {'Content-type': 'application/json'}
 image2 = 0
 
 # define static discord stuff
-token = "OTI3OTcxNDkyMTQ5NDYwOTkz.YdR-zA.ohnB6dPvZ1rkg2ayYe8gsXa26KQ"
+token = os.getenv('TOKEN')
 bot = commands.Bot(command_prefix='!', activity= discord.Activity(type=discord.ActivityType.watching, name="for !reserve \U0001F973"))
 bot.remove_command('help')
 
